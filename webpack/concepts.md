@@ -99,3 +99,9 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({ template: "./src/index.html" })],
 };
 ```
+
+<hr>
+
+**참고**
+<a href="https://webpack.kr/concepts/modules/">웹팩 공식문서</a>
+<a href="https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html">웹팩 핸드북</a>
