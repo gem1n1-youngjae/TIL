@@ -25,7 +25,7 @@
 
 1. 웹 브라우저에 www.naver.com을 입력하면 먼저 `Local DNS`에게 www.naver.com이라는 hostname"에 대한 IP 주소를 물어본다.
 <br>
-2. `Local DNS`에는 "www.naver.com에 대한 IP 주소"가 있을 수도 없을 수도 있다. 만약 있다면 `Local DNS`가 바로 PC에 IP 주소를 주고 끝난다. 본 설명에서는 `Local DNS`에 "www.naver.com에 대한 IP 주소"가 없다고 **가정**한다.
+2. `Local DNS`에는 "www.naver.com에 대한 IP 주소"가 있을 수도 없을 수도 있다. 만약 있다면 `Local DNS`가 바로 PC에 IP 주소를 주고 끝난다. 본 설명에서는 `Local DNS`에 "www.naver.com에 대한 IP 주소"가 없다고 <b>가정</b> 한다.
 <br>
 3. `Local DNS`는 "www.naver.com에 대한 IP 주소"를 찾아내기 위해 다른 DNS 서버들과 통신을 시작한다. 먼저 `Root DNS 서버`에게 www.naver.com에 대한 IP 주소를 요청한다. 이를 위해 각 `Local DNS 서버`에는 `Root DNS 서버`의 정보 (IP 주소)가 미리 설정되어 있어야 한다.
 <br>
