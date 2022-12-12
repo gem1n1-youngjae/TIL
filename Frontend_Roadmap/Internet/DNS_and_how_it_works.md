@@ -24,19 +24,12 @@
 <img src="../../img/DNS_Behavior_Principles.png">
 
 1. 웹 브라우저에 www.naver.com을 입력하면 먼저 `Local DNS`에게 www.naver.com이라는 hostname"에 대한 IP 주소를 물어본다.
-<br>
 2. `Local DNS`에는 "www.naver.com에 대한 IP 주소"가 있을 수도 없을 수도 있다. 만약 있다면 `Local DNS`가 바로 PC에 IP 주소를 주고 끝난다. 본 설명에서는 `Local DNS`에 "www.naver.com에 대한 IP 주소"가 없다고 <b>가정</b> 한다.
-<br>
 3. `Local DNS`는 "www.naver.com에 대한 IP 주소"를 찾아내기 위해 다른 DNS 서버들과 통신을 시작한다. 먼저 `Root DNS 서버`에게 www.naver.com에 대한 IP 주소를 요청한다. 이를 위해 각 `Local DNS 서버`에는 `Root DNS 서버`의 정보 (IP 주소)가 미리 설정되어 있어야 한다.
-<br>
 4. `Root DNS 서버`는 www.naver.com의 IP 주소를 가지고 있지 않다. 그래서 `Local DNS 서버`에게 www.naver.com에 대한 IP 주소가 없으니. 자신이 알려주는 다른 DNS 서버에게 요청을 하라고 응답을 한다. (이 다른 DNS 서버는 `com 도메인을 관리하는 DNS 서버`이다.)
-<br>
 5. 이제 `Local DNS 서버`는 `com 도메인을 관리하는 DNS 서버`에 다시 www.naver.com에 대한 IP 주소를 요청한다.
-<br>
 6. `com 도메인을 관리하는 DNS 서버`에도 해당 정보가 없다. 그래서 이 DNS 서버는 `Local DNS` www.naver.com의 IP 주소를 가지고 있지 않다. 그래서 `Local DNS 서버`에게 www.naver.com에 대한 IP 주소가 없으니. 자신이 알려주는 다른 DNS 서버에게 요청을 하라고 4번과 매우 비슷한 응답을 한다. 이 다른 `DNS 서버`는 `naver.com도메인을 관리하는 DNS 서버`이다.
-<br>
 7. `naver.com DNS 서버` 에는 `www.naver.com 의 IP 주소` 가 있다. 그래서 Local DNS 서버에게 "www.naver.com에 대한 IP 주소는 222.122.195.6" 라는 응답을 한다.
-<br>
 8. 이를 수신한 `Local DNS`는 `www.naver.com 의 IP` 주소를 캐싱을 하고 이후 다른 요청이 있을시 응답할 수 있도록 IP 주소 정보를 단말(PC)에 전달해 준다.
 
 > Local DNS 서버가 여러 DNS 서버에 차례대로 (Root DNS 서버 -> com DNS 서버 -> `naver.com` DNS 서버) 요청하여 그 답을 찾는 과정을 Recursive Query 라고 부른다.
